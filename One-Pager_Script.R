@@ -1,19 +1,7 @@
 
 # Example of Chile
 
-# 1 Create a csv File ###################################################################################
-
-# Load Data in your R environment
-
-library(haven)
-
-Chile_master_1989_2017 <- read_dta("/your_file_path/Chile_master_1989-2017.dta")
-
-write.csv(Chile_master_1989_2017, "/your_storage_location/chile_master.csv", row.names = FALSE)
-
-
-
-# 3 Test the Performance of the Large Language Model in R ###############################################
+# 2 Test the Performance of the Large Language Model in R ###############################################
 
 # Load Dataset
 chile_PanelID <- read_csv("Downloads/chile_PanelID.csv")
@@ -37,7 +25,7 @@ df_different_names <- df_filtered %>%
 View(df_different_names)
 
 
-# 4 Create an Excel File and Save #######################################################################
+# 3 Create an Excel File and Save #######################################################################
 
 # Download Chile as Excel
 
