@@ -28,14 +28,20 @@ except Exception as e:
     print(f"Error loading model: {e}")
     exit()
 
-# Load the dataset
-local_file_path = "/your_file_path/chile_master.csv"
+
+# Path to your .dta file
+local_file_path = "/your_file_path/Chile_master_1989-2017.dta"
+
+# Try to load the dataset
 try:
-    country_df = pd.read_csv(local_file_path)
+    country_df = pd.read_stata(local_file_path)
     print("Dataset loaded successfully!")
 except Exception as e:
     print(f"Error loading dataset: {e}")
     exit()
+
+# Display first few rows to ensure it loaded correctly
+print(country_df.head())
 
 
 # Generate semantic embeddings
